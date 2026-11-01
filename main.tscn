@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://eyqpo61r0cmf"]
+
+[ext_resource type="PackedScene" uid="uid://tebiluqv6q2c" path="res://caballero.tscn" id="1_ig7tw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ci823"]
+size = Vector2(4000, 60)
+
+[node name="Main" type="Node2D" unique_id=1755008785]
+
+[node name="caballero" parent="." unique_id=2012509552 instance=ExtResource("1_ig7tw")]
+position = Vector2(160, 100)
+
+[node name="suelo" type="StaticBody2D" parent="." unique_id=1593607645]
+position = Vector2(160, 150)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="suelo" unique_id=1246641968]
+shape = SubResource("RectangleShape2D_ci823")
+debug_color = Color(0.22745098, 0.22745098, 0.36078432, 1)
+
+[node name="ColorRect" type="ColorRect" parent="suelo" unique_id=1697854052]
+offset_left = -2000.0
+offset_top = -30.0
+offset_right = 2000.0
+offset_bottom = 30.0
+color = Color(0.22745098, 0.22745098, 0.36078432, 1)
+
+[node name="fondo_lejano" type="Parallax2D" parent="." unique_id=346670600]
+z_index = -10
+scroll_scale = Vector2(0.5, 1)
+repeat_size = Vector2(320, 0)
+repeat_times = 3
+
+[node name="columna 1" type="ColorRect" parent="fondo_lejano" unique_id=2064759231]
+offset_left = 20.0
+offset_top = 45.0
+offset_right = 44.0
+offset_bottom = 135.0
+color = Color(0.18039216, 0.18039216, 0.24705882, 1)
+
+[node name="columna 2" type="ColorRect" parent="fondo_lejano" unique_id=1814730212]
+offset_left = 110.0
+offset_top = 75.0
+offset_right = 128.0
+offset_bottom = 135.0
+color = Color(0.18039216, 0.18039216, 0.24705882, 1)
+
+[node name="columna 3" type="ColorRect" parent="fondo_lejano" unique_id=210373340]
+offset_left = 200.0
+offset_top = 25.0
+offset_right = 228.0
+offset_bottom = 129.0
+color = Color(0.18039216, 0.18039216, 0.24705882, 1)
+
+[node name="columna 4" type="ColorRect" parent="fondo_lejano" unique_id=571992051]
+offset_left = 280.0
+offset_top = 60.0
+offset_right = 300.0
+offset_bottom = 135.0
+color = Color(0.18039216, 0.18039216, 0.24705882, 1)

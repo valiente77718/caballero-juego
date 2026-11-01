@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://tebiluqv6q2c"]
+
+[ext_resource type="Script" uid="uid://q7myjato6dnd" path="res://collision_shape_2d.gd" id="1_1bf1c"]
+[ext_resource type="Texture2D" uid="uid://chk883omcbe50" path="res://caballero.png" id="2_b85wf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ci823"]
+size = Vector2(20, 32)
+
+[node name="caballero" type="CharacterBody2D" unique_id=2012509552]
+script = ExtResource("1_1bf1c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1013017127]
+position = Vector2(0, -16)
+shape = SubResource("RectangleShape2D_ci823")
+debug_color = Color(0.22745098, 0.22745098, 0.36078432, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=403642418]
+position = Vector2(0, -18.5)
+texture = ExtResource("2_b85wf")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1182523573]
+position = Vector2(0, -18)
+limit_bottom = 180
+limit_smoothed = true
+position_smoothing_enabled = true
